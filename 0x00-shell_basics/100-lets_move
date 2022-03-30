@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | grep "^[A-Z]" |mv  /tmp/u
+ls -lad [A-Z]* | grep -v ^d |mv  /tmp/u
