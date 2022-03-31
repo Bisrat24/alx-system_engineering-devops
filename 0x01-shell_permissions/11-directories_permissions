@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -d | chmod -R 755 . 
+ls -d | chmod -R 755 * 
