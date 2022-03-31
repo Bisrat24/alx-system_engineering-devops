@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R 644 /path/to/location
+chmod -R 755 /path/to/location
