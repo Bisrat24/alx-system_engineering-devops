@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod root:school hello | groups
+chgrp school hello
