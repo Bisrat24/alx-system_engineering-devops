@@ -1,2 +1,2 @@
 #!/bin/bash
-emacs /etc/passwd /etc/hosts
+cmp /etc/passwd /etc/hosts
