@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -n | grep [13579][[:space:]] | sed -n 1~2p
+cat -n |  sed -n 1~2p
