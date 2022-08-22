@@ -12,14 +12,19 @@ then
 	        xargs kill < "/var/run/my_process.pid"
 		    rm /var/run/my_process.pid
 		        echo "manage_my_process stopped"
-			elif [ "$1" = "restart" ]
+			elif [ "$1" = "restart" && -e /var/run/my_process.pid ]
 			then
-# xargs kill < "/var/run/my_process.pid"
-				# rm /var/run/my_process.pid
+				 xargs kill < "/var/run/my_process.pid"
+				 rm /var/run/my_process.pid
 				    ./manage_my_process &
 				        echo $! >> /var/run/my_process.pid
 					    echo "manage_my_process restarted"
-					    else
-					        echo "Usage: manage_my_process {start|stop|restart}"
-						fi
+					   elif [ "$1" = "restart" ]
+					   then
+					       ./manage_my_process &
+					       echo $! >> /var/run/my_process.pid
+					       echo "manage_my_process restarted"
+					    	else
+					        	echo "Usage: manage_my_process {start|stop|restart}"
+							fi
 
